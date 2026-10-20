@@ -2,7 +2,15 @@
 
 This is the **public, canonical update entry point**. Installations should link directly here and to [MANIFEST.json](MANIFEST.json). Check when a user requests "Second Brain updates", when running installation, or during an explicitly requested update check. Do not claim proactive notifications without a scheduled monitor or connected capability.
 
-## Current: 1.1.2 — Generic launcher and contextual submenus (2026-10-20)
+## Current: 1.1.3 — UI-first hybrid startup (2026-10-20)
+- Split startup behavior into a concise custom-instructions UI bootstrap and a detailed public interaction standard.
+- On the first assistant turn of a configured chat, request one read of the public UI standard when authorized GitHub access is available. Do not repeat it for each ordinary question.
+- Clarified that the first-response button comes from the bootstrap and does **not** depend on a successful GitHub read; the public read enriches the context-aware submenus.
+- Updated the installation bootstrap and added acceptance tests for supported, missing, and failed repository access.
+
+**Compatibility:** compatible with schema 1.0; no migration or private data writes. ChatGPT cannot guarantee that it will execute a GitHub request on every fresh-chat turn or provide a permanent native toolbar; any claimed startup read must be verified. The user must manually adopt the shortened custom-instructions bootstrap.
+
+## Previous: 1.1.2 — Generic launcher and contextual submenus (2026-10-20)
 - Specified an unchanging three-button Second Brain launcher: Modes, Save, Actions. No contextual replacement labels or suggested tasks in the collapsed control.
 - Each button now routes to its own contextual menu in the next assistant response. Opening a submenu never directly changes modes, saves data, or executes actions.
 - Defined submenu content for available modes, save candidates with preview/approval, and useful feasible next actions; added navigation-only button instruction examples.
