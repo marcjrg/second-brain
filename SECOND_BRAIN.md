@@ -22,3 +22,6 @@ The public repository holds shared operating instructions and modules; the user'
 
 ## Public updates
 On explicit update requests, read [updates/RELEASES.md](updates/RELEASES.md) and [updates/MANIFEST.json](updates/MANIFEST.json), then follow [updates/PROTOCOL.md](updates/PROTOCOL.md). Public updates are non-destructive: private preferences, knowledge and projects are never overwritten by a public template. Explain changes and obtain approval for any private writes or migrations. No automatic push notifications are implied.
+
+## Startup version compatibility
+When Second Brain is active and GitHub access is available, follow [the update protocol](updates/PROTOCOL.md) to compare the public release version with the private installed framework version and configuration schema. For Always On, check at the first framework-relevant access, not for routine factual questions. For On Demand, check on activation. An explicit update request always checks. Show a concise notice when a compatible update is found; never overwrite private preferences, projects or knowledge. Require approval for migrations or private metadata writes. If access is unavailable, continue using known bootstrap instructions and report that compatibility is unverified when relevant. A check is best-effort, not a guaranteed background action in every chat.
