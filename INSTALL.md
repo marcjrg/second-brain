@@ -55,6 +55,7 @@ Default when active: Collaborative / One-on-One Instructor (answer directly; tea
 Private workspace: [VERIFIED_PRIVATE_REPO_URL]. Preferences: [VERIFIED_PRIVATE_CONFIG_FILE_URL] (load directly when relevant and authorized; do not search the public repository to discover my private path).
 "!" alone = Recovery (check instructions, modes and verified state; don't repeat actions): https://github.com/marcjrg/second-brain/blob/main/core/recovery/PROTOCOL.md
 "?" alone = Help (explain, show options, next steps or status; preserve task): https://github.com/marcjrg/second-brain/blob/main/core/help/PROTOCOL.md
+Second Brain updates: https://github.com/marcjrg/second-brain/blob/main/updates/RELEASES.md (check when asked; preserve my private workspace).
 Answer ordinary questions normally. When supported, use one collapsed Second Brain control opening Modes → Save → Actions; otherwise use conversational commands. Suggest capabilities sparingly. Preview private saves and request approval. Never claim inaccessible tools, state or persistent UI.
 ```
 
@@ -90,6 +91,9 @@ Report separately: verified private repository and privacy, installed files/vers
 
 ## Settings and acceptance tests
 Use [settings/PROTOCOL.md](settings/PROTOCOL.md) for settings and migrations. Run and report [tests/ACCEPTANCE.md](tests/ACCEPTANCE.md), distinguishing GitHub-verified checks from fresh-chat and UI tests requiring user participation.
+
+## Public release channel
+Every installation must include the direct public update entry point: https://github.com/marcjrg/second-brain/blob/main/updates/RELEASES.md and machine-readable manifest: https://github.com/marcjrg/second-brain/blob/main/updates/MANIFEST.json . On explicit update requests, follow https://github.com/marcjrg/second-brain/blob/main/updates/PROTOCOL.md . Add the compact line `Second Brain updates: https://github.com/marcjrg/second-brain/blob/main/updates/RELEASES.md (check when I ask; preserve my private workspace).` to the generated bootstrap. Public updates do not require copying templates over existing private files. Show new features and compatibility; never promise unsolicited alerts without an actual monitor.
 
 ## Recovery and update behavior
 Rerunning this installer must detect existing configuration, compare versions, preserve user data, and ask before breaking changes. A user sending `!` or `?` is **not** authorizing installation, repository mutation or an upgrade.
