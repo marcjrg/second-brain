@@ -15,5 +15,6 @@ Report PASS / FAIL / NOT TESTED with evidence for each:
 12. Check rerun installation is idempotent and preserves existing data.
 13. Check inaccessible GitHub gives truthful fallback.
 14. Check response-level UI where supported; never claim a native persistent toolbar.
+15. In a separate configured Always On fresh chat, ask an ordinary short factual question as the first message. Verify that the assistant answers directly, includes exactly one compact collapsed Second Brain control if supported, and that Modes, Save and Actions open appropriately. A GitHub request must not be required to show the control. If a platform limitation prevents it, record the omission and fallback instead of reporting PASS.
 
 Repository checks do not prove custom instructions were applied or fresh-chat behavior. Do not mark release fully verified until relevant live checks are completed.
