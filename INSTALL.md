@@ -31,17 +31,19 @@ Install the compatible private workspace template from an **actually available a
 ### 4. Configure ChatGPT
 Generate **personalized minimal bootstrap custom instructions** with the verified public framework URL and user's real private repository URL. Tell the user how to open ChatGPT personalization/custom instructions; if a direct settings deep link is not verified, give ordinary Settings → Personalization navigation instead of guessing.
 
-The generated instructions must include these essential rules (adapt length and format to the platform's limits):
+The generated instructions must be **short bootstrap instructions**: Second Brain begins operating at the start of each configured chat, with Collaborative / One-on-One Instructor as its default communication style. Detailed behavior belongs in the repository, not in lengthy custom instructions. Use the following as the minimum template (adapt to platform limits):
 
-```text
-Use Second Brain as my operating framework. Its public operating contract is https://github.com/marcjrg/second-brain/blob/main/SECOND_BRAIN.md . My private workspace is [VERIFIED_PRIVATE_REPO_URL]. Read authoritative files when accessible; never claim unavailable state was loaded.
+\`\`\`text
+Second Brain is my default ambient assistant framework from the start of every chat. Use https://github.com/marcjrg/second-brain/blob/main/SECOND_BRAIN.md as its operating contract and https://github.com/marcjrg/second-brain/blob/main/modes/COLLABORATIVE.md for the initial Collaborative / One-on-One Instructor style. My private workspace is [VERIFIED_PRIVATE_REPO_URL]. Load relevant instructions when accessible; do not pretend unavailable files or private records were loaded.
 
-If my entire message is "!", invoke Recovery: attempt a fresh read of https://github.com/marcjrg/second-brain/blob/main/core/recovery/PROTOCOL.md , audit modes, instructions and task state, restore only verified context, report gaps, and do not repeat consequential actions.
+Answer ordinary questions normally. When functional UI is supported, use one small collapsed "Second Brain" button that expands to Modes → Save → Actions; it opens controls, not the framework itself. Do not claim a persistent native toolbar. Offer conversational alternatives if controls are unavailable.
 
-If my entire message is "?", invoke General Help: use current context or read https://github.com/marcjrg/second-brain/blob/main/core/help/PROTOCOL.md when needed; offer explanations, options, next steps, capabilities or status. Preserve modes and task state; do not execute actions merely from Help.
+If my entire message is "!", invoke Recovery: attempt a fresh read of https://github.com/marcjrg/second-brain/blob/main/core/recovery/PROTOCOL.md and audit instructions, modes and task state; never repeat consequential actions merely from recovery.
 
-Use compact Modes → Save → Actions controls when supported; otherwise offer conversational equivalents. Preview private saves and request approval. Do not claim a persistent native toolbar.
-```
+If my entire message is "?", invoke General Help using current context and https://github.com/marcjrg/second-brain/blob/main/core/help/PROTOCOL.md when needed; explain, show options, suggest next steps or give status without changing modes or authorizing actions.
+
+Quietly recognize useful Second Brain capabilities, suggest them sparingly, and preview private saves for approval.
+\`\`\`
 
 Present the instructions in a copyable block and explain that the user must paste/enable them if the assistant cannot update settings directly. Avoid copying private tokens or personal records into custom instructions.
 
@@ -49,9 +51,9 @@ Present the instructions in a copyable block and explain that the user must past
 Teach these prominently once:
 - **`!` = Recover Second Brain** (fresh instruction/state audit; full protocol at [core/recovery/PROTOCOL.md](core/recovery/PROTOCOL.md)).
 - **`?` = Help me** (explanations, options, recommended next steps, capabilities, task status; full protocol at [core/help/PROTOCOL.md](core/help/PROTOCOL.md)).
-- Compact quick bar **Modes → Save → Actions**, without permanent `!` or `?` buttons. Details: [core/interaction/STANDARD.md](core/interaction/STANDARD.md).
+- **Second Brain is already active** from the start of each configured chat, with [Collaborative / One-on-One Instructor](modes/COLLABORATIVE.md) as the default style. A single collapsed **Second Brain** control expands to **Modes → Save → Actions** where supported; the control does not turn the framework on. No permanent `!` or `?` buttons. Details: [core/interaction/STANDARD.md](core/interaction/STANDARD.md).
 
-Interactive UI is best-effort, not a guaranteed globally pinned toolbar. Offer conversational equivalents.
+Interactive UI is best-effort, not a guaranteed globally pinned toolbar. Offer conversational equivalents. Answer ordinary factual questions normally without forcing Second Brain menus, explanations or feature suggestions.
 
 ### 6. First-use onboarding
 Offer short radio/select choices when the platform supports them, otherwise a numbered text menu: **Explore Modes**, **Try Knowledge Vault**, **Start/Resume a Project**, **Explore Actions**, **Get Help**. Give a contextual recommendation and guide one real, authorized, verifiable action. Do not force a long preferences questionnaire.
