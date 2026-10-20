@@ -1,0 +1,19 @@
+{
+  "channel": "stable",
+  "latest_version": "1.1.0",
+  "published_date": "2026-10-20",
+  "schema_version": "1.0",
+  "minimum_supported_schema": "1.0",
+  "release_notes": "https://github.com/marcjrg/second-brain/blob/main/updates/RELEASES.md",
+  "update_protocol": "https://github.com/marcjrg/second-brain/blob/main/updates/PROTOCOL.md",
+  "breaking": false,
+  "migration_required": false,
+  "features": [
+    "guided_onboarding",
+    "private_workspace_template",
+    "direct_private_config_bootstrap",
+    "settings_protocol",
+    "release_channel"
+  ],
+  "notice": "Public framework update only; private repositories are not automatically modified."
+}
