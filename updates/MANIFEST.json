@@ -1,6 +1,6 @@
 {
   "channel": "stable",
-  "latest_version": "1.1.2",
+  "latest_version": "1.1.3",
   "published_date": "2026-10-20",
   "schema_version": "1.0",
   "minimum_supported_schema": "1.0",
@@ -15,7 +15,8 @@
     "settings_protocol",
     "release_channel",
     "consistent_compact_control_startup",
-    "generic_launcher_contextual_submenus"
+    "generic_launcher_contextual_submenus",
+    "ui_first_hybrid_startup"
   ],
-  "notice": "Compatible public framework patch: the three generic buttons route to context-aware menus without acting immediately. Private files and ChatGPT custom instructions are not automatically changed."
+  "notice": "Compatible public patch: short custom-instructions UI bootstrap plus preferred single startup read of detailed public UI contract. Neither a permanent button nor a repository read is guaranteed by platform controls."
 }
