@@ -1,0 +1,19 @@
+# Second Brain installation acceptance plan
+
+Report PASS / FAIL / NOT TESTED with evidence for each:
+1. Verify private owner, private visibility, branch and authorized permissions.
+2. Verify private template files and `schema_version`.
+3. Validate all preference values against `schema/PREFERENCES.md`.
+4. Verify direct private preferences file read after write.
+5. Verify generated bootstrap has public contract URL, verified private repository URL, direct private config URL, activation and !/? URLs.
+6. Check Always On startup in a separate configured fresh chat.
+7. Check On Demand starts inactive and responds to explicit on/off commands.
+8. Check ordinary factual questions do not trigger unnecessary repository retrieval.
+9. Check ! and ? protocols without unauthorized writes.
+10. Check preview/approval and persistence for a harmless Knowledge Vault record; delete test data only with permission.
+11. Check settings edit preserves unrelated keys and validates write/readback.
+12. Check rerun installation is idempotent and preserves existing data.
+13. Check inaccessible GitHub gives truthful fallback.
+14. Check response-level UI where supported; never claim a native persistent toolbar.
+
+Repository checks do not prove custom instructions were applied or fresh-chat behavior. Do not mark release fully verified until relevant live checks are completed.
