@@ -28,30 +28,49 @@ Instruct the user to select their own account as owner, select **Private**, crea
 ### 3. Install and verify
 Install the compatible private workspace template from an **actually available and verified** framework release. If no published template/release exists, disclose that and provide the necessary minimal files from verified sources; never invent a release. Private workspace should include personal config, Knowledge Vault structure, project registry and private extensions where available. Link to a pinned compatible public framework version when versioned releases exist; otherwise identify the exact verified commit as the provisional reference. Never silently import private data. Read back installed files; test authorized harmless save/retrieve/update if the implementation supports it, and clean up test records safely. Record limitations.
 
-### 4. Configure ChatGPT
-Generate **personalized minimal bootstrap custom instructions** with the verified public framework URL and user's real private repository URL. Tell the user how to open ChatGPT personalization/custom instructions; if a direct settings deep link is not verified, give ordinary Settings → Personalization navigation instead of guessing.
+### 4. Choose activation and configure ChatGPT
+Ask **one concise onboarding question** before generating instructions:
 
-The generated instructions must be **short bootstrap instructions**: Second Brain begins operating at the start of each configured chat, with Collaborative / One-on-One Instructor as its default communication style. Detailed behavior belongs in the repository, not in lengthy custom instructions. Use the following as the minimum template (adapt to platform limits):
+**How should Second Brain run?**
+- **Always On (recommended):** Apply the framework quietly from the start of each chat. Collaborative / One-on-One Instructor is the initial style, unless the user has chosen another.
+- **On Demand:** Keep the user's existing assistant behavior until they say **"Activate Second Brain"** or **"Second Brain on"**. **"Deactivate Second Brain"** or **"Second Brain off"** returns to the user's normal instructions. Explicit `!` and `?` commands remain available in either state.
 
-\`\`\`text
-Second Brain is my default ambient assistant framework from the start of every chat. Use https://github.com/marcjrg/second-brain/blob/main/SECOND_BRAIN.md as its operating contract and https://github.com/marcjrg/second-brain/blob/main/modes/COLLABORATIVE.md for the initial Collaborative / One-on-One Instructor style. My private workspace is [VERIFIED_PRIVATE_REPO_URL]. Load relevant instructions when accessible; do not pretend unavailable files or private records were loaded.
+Do not presume the user's choice. Explain that activation is conversational/configurational, not a guaranteed cross-chat persisted toggle. With On Demand, a new chat starts inactive unless the user explicitly changes that preference. With Always On, each new configured chat starts active. The user may change their preference later.
 
-Answer ordinary questions normally. When functional UI is supported, use one small collapsed "Second Brain" button that expands to Modes → Save → Actions; it opens controls, not the framework itself. Do not claim a persistent native toolbar. Offer conversational alternatives if controls are unavailable.
+**Preserve existing custom instructions.** Ask users to review their current instructions and **append or merge** the minimum compatible Second Brain bootstrap rather than replace unrelated preferences. Avoid duplication and conflicting directions; ask before altering existing text. Favor a compact addition and disclose if the platform character limit prevents it. Provide a copyable snippet, not a full rewrite unless requested. Detailed behaviors stay in GitHub.
 
-If my entire message is "!", invoke Recovery: attempt a fresh read of https://github.com/marcjrg/second-brain/blob/main/core/recovery/PROTOCOL.md and audit instructions, modes and task state; never repeat consequential actions merely from recovery.
+Use the verified public URLs and the user's **actual verified private workspace URL**, never the maintainer's private workspace. Keep these four paths explicit, with one-line fallback descriptions:
+- Operating contract: https://github.com/marcjrg/second-brain/blob/main/SECOND_BRAIN.md
+- Collaborative / One-on-One Instructor: https://github.com/marcjrg/second-brain/blob/main/modes/COLLABORATIVE.md
+- `!` Recovery: https://github.com/marcjrg/second-brain/blob/main/core/recovery/PROTOCOL.md
+- `?` General Help: https://github.com/marcjrg/second-brain/blob/main/core/help/PROTOCOL.md
 
-If my entire message is "?", invoke General Help using current context and https://github.com/marcjrg/second-brain/blob/main/core/help/PROTOCOL.md when needed; explain, show options, suggest next steps or give status without changing modes or authorizing actions.
+#### Compact bootstrap template
+Replace `[ACTIVATION]` with one of the activation sentences below, and `[VERIFIED_PRIVATE_REPO_URL]` with the verified URL.
 
-Quietly recognize useful Second Brain capabilities, suggest them sparingly, and preview private saves for approval.
-\`\`\`
+```text
+Second Brain framework: https://github.com/marcjrg/second-brain/blob/main/SECOND_BRAIN.md
+[ACTIVATION]
+Default when active: Collaborative / One-on-One Instructor (answer directly; teach clearly when useful): https://github.com/marcjrg/second-brain/blob/main/modes/COLLABORATIVE.md
+Private workspace: [VERIFIED_PRIVATE_REPO_URL] (access only when relevant, authorized and available).
+"!" alone = Recovery (check instructions, modes and verified state; don't repeat actions): https://github.com/marcjrg/second-brain/blob/main/core/recovery/PROTOCOL.md
+"?" alone = Help (explain, show options, next steps or status; preserve task): https://github.com/marcjrg/second-brain/blob/main/core/help/PROTOCOL.md
+Answer ordinary questions normally. When supported, use one collapsed Second Brain control opening Modes → Save → Actions; otherwise use conversational commands. Suggest capabilities sparingly. Preview private saves and request approval. Never claim inaccessible tools, state or persistent UI.
+```
 
-Present the instructions in a copyable block and explain that the user must paste/enable them if the assistant cannot update settings directly. Avoid copying private tokens or personal records into custom instructions.
+**Always On activation sentence:** `Second Brain is active from the start of each chat; its controls are optional, not an on/off switch.`
+
+**On Demand activation sentence:** `Second Brain starts inactive each chat. "Activate Second Brain"/"Second Brain on" enables it for this chat; "Deactivate Second Brain"/"Second Brain off" disables it. While inactive, follow my other instructions; ! and ? still work.`
+
+The generated snippet is **an example to merge**, not permission to overwrite the user's existing instructions. If space is severely limited, offer a shorter minimal variant preserving the central contract, activation choice and both shortcut URLs, with optional modules loaded from the contract.
+
+Explain Settings → Personalization navigation unless a verified direct settings link exists. The user must paste/apply instructions when the assistant lacks settings-write access. Never insert private credentials into custom instructions.
 
 ### 5. Introduce the interface and shortcuts
 Teach these prominently once:
 - **`!` = Recover Second Brain** (fresh instruction/state audit; full protocol at [core/recovery/PROTOCOL.md](core/recovery/PROTOCOL.md)).
 - **`?` = Help me** (explanations, options, recommended next steps, capabilities, task status; full protocol at [core/help/PROTOCOL.md](core/help/PROTOCOL.md)).
-- **Second Brain is already active** from the start of each configured chat, with [Collaborative / One-on-One Instructor](modes/COLLABORATIVE.md) as the default style. A single collapsed **Second Brain** control expands to **Modes → Save → Actions** where supported; the control does not turn the framework on. No permanent `!` or `?` buttons. Details: [core/interaction/STANDARD.md](core/interaction/STANDARD.md).
+- **Activation follows the user's onboarding choice:** Always On starts active; On Demand starts inactive until explicitly activated. When active, [Collaborative / One-on-One Instructor](modes/COLLABORATIVE.md) is the default style. A single collapsed **Second Brain** control expands to **Modes → Save → Actions** where supported; the control does not turn the framework on. No permanent `!` or `?` buttons. Details: [core/interaction/STANDARD.md](core/interaction/STANDARD.md).
 
 Interactive UI is best-effort, not a guaranteed globally pinned toolbar. Offer conversational equivalents. Answer ordinary factual questions normally without forcing Second Brain menus, explanations or feature suggestions.
 
@@ -71,4 +90,4 @@ Report separately: verified private repository and privacy, installed files/vers
 Rerunning this installer must detect existing configuration, compare versions, preserve user data, and ask before breaking changes. A user sending `!` or `?` is **not** authorizing installation, repository mutation or an upgrade.
 
 ## Completion criteria
-The user has a verified private workspace with readable installed configuration, an accessible framework reference, a truthful custom-instructions setup status, and a clear introduction to controls and shortcuts. Never claim unsupported features are working.
+The user has a verified private workspace with readable installed configuration, an accessible framework reference, a recorded activation preference (Always On or On Demand), a truthful custom-instructions setup status, and a clear introduction to controls and shortcuts. Never claim unsupported features are working.
