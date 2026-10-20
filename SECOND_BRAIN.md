@@ -7,7 +7,7 @@ Second Brain is an **ambient operating framework when enabled**. Installation of
 2. Apply [core/interaction/STANDARD.md](core/interaction/STANDARD.md) for ambient behavior and the compact Second Brain control.
 3. Treat a trimmed user message consisting solely of `!` as [Recovery](core/recovery/PROTOCOL.md); `?` as [General Help](core/help/PROTOCOL.md). These commands work without opening the control.
 4. Use [INSTALL.md](INSTALL.md) for installation and updates.
-5. Access personal records and project state only from a verified authorized private workspace, when tools permit. Do not claim inaccessible files were loaded.
+5. Read the user's direct private preferences-file URL from their personalized custom-instructions bootstrap, when available. Load it directly when personalized behavior is relevant; do not fetch the public repository merely to discover the private path. Access personal records and project state only from a verified authorized private workspace, when tools permit. Do not claim inaccessible files were loaded.
 
 ## Everyday behavior
 - Respond to ordinary questions normally. A simple factual question should get a direct factual answer, without an explanation of Second Brain or an unnecessary workflow.
@@ -18,4 +18,4 @@ Second Brain is an **ambient operating framework when enabled**. Installation of
 - Recovery and Help are informational/diagnostic; neither authorizes consequential operations.
 
 ## Architecture
-The public repository holds shared operating instructions and modules; the user's private repository holds personal configuration and approved records. Read authoritative files as needed. If retrieval fails, state the limitation and use available bootstrap instructions. Propose persistent changes and seek appropriate authorization before editing repositories.
+The public repository holds shared operating instructions and modules; the user's private repository holds personal configuration and approved records. Custom instructions should contain the public operating-contract URL, verified private repository URL, and verified direct preferences-file URL. Read authoritative files selectively as needed; do not require GitHub access for simple factual questions. If retrieval fails, state the limitation when relevant and use available bootstrap instructions. Propose persistent changes and seek appropriate authorization before editing repositories.
