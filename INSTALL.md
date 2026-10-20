@@ -26,7 +26,7 @@ https://github.com/new?name=second-brain-personal&description=My%20private%20Sec
 Instruct the user to select their own account as owner, select **Private**, create the repository, and return to the chat. The URL does **not** guarantee privacy or owner selection. Verify ownership and privacy after creation; do not write personal data until confirmed. If the name is unavailable, support an alternate name and use its actual verified URL.
 
 ### 3. Install and verify
-Install the compatible private workspace template from an **actually available and verified** framework release. If no published template/release exists, disclose that and provide the necessary minimal files from verified sources; never invent a release. Private workspace should include personal config, Knowledge Vault structure, project registry and private extensions where available. Link to a pinned compatible public framework version when versioned releases exist; otherwise identify the exact verified commit as the provisional reference. Never silently import private data. Read back installed files; test authorized harmless save/retrieve/update if the implementation supports it, and clean up test records safely. Record limitations.
+Install the compatible private workspace template from an **actually available and verified** framework release. If no published template/release exists, disclose that and provide the necessary minimal files from verified sources; never invent a release. Private workspace should include personal config, Knowledge Vault structure, project registry and private extensions where available. Standardize the primary preferences file at `config/preferences.yaml` on the verified default branch; create and read it back only after private visibility and write authorization are verified. If another configuration path already exists, preserve it and use its actual verified path instead of inventing a file. Link to a pinned compatible public framework version when versioned releases exist; otherwise identify the exact verified commit as the provisional reference. Never silently import private data. Read back installed files; test authorized harmless save/retrieve/update if the implementation supports it, and clean up test records safely. Record limitations.
 
 ### 4. Choose activation and configure ChatGPT
 Ask **one concise onboarding question** before generating instructions:
@@ -39,20 +39,20 @@ Do not presume the user's choice. Explain that activation is conversational/conf
 
 **Preserve existing custom instructions.** Ask users to review their current instructions and **append or merge** the minimum compatible Second Brain bootstrap rather than replace unrelated preferences. Avoid duplication and conflicting directions; ask before altering existing text. Favor a compact addition and disclose if the platform character limit prevents it. Provide a copyable snippet, not a full rewrite unless requested. Detailed behaviors stay in GitHub.
 
-Use the verified public URLs and the user's **actual verified private workspace URL**, never the maintainer's private workspace. Keep these four paths explicit, with one-line fallback descriptions:
+Use the verified public URLs and the user's **actual verified private workspace URL AND direct private preferences-file URL**, never the maintainer's private workspace. Obtain the repository default branch and confirm the preferences file exists and is readable before putting its URL in custom instructions. A GitHub URL is not access permission; verify authorized private read access separately. Keep these four paths explicit, with one-line fallback descriptions:
 - Operating contract: https://github.com/marcjrg/second-brain/blob/main/SECOND_BRAIN.md
 - Collaborative / One-on-One Instructor: https://github.com/marcjrg/second-brain/blob/main/modes/COLLABORATIVE.md
 - `!` Recovery: https://github.com/marcjrg/second-brain/blob/main/core/recovery/PROTOCOL.md
 - `?` General Help: https://github.com/marcjrg/second-brain/blob/main/core/help/PROTOCOL.md
 
 #### Compact bootstrap template
-Replace `[ACTIVATION]` with one of the activation sentences below, and `[VERIFIED_PRIVATE_REPO_URL]` with the verified URL.
+Replace `[ACTIVATION]` with one of the activation sentences below, `[VERIFIED_PRIVATE_REPO_URL]` with the verified private repository URL, and `[VERIFIED_PRIVATE_CONFIG_FILE_URL]` with the verified direct URL to its configuration file.
 
 ```text
 Second Brain framework: https://github.com/marcjrg/second-brain/blob/main/SECOND_BRAIN.md
 [ACTIVATION]
 Default when active: Collaborative / One-on-One Instructor (answer directly; teach clearly when useful): https://github.com/marcjrg/second-brain/blob/main/modes/COLLABORATIVE.md
-Private workspace: [VERIFIED_PRIVATE_REPO_URL] (access only when relevant, authorized and available).
+Private workspace: [VERIFIED_PRIVATE_REPO_URL]. Preferences: [VERIFIED_PRIVATE_CONFIG_FILE_URL] (load directly when relevant and authorized; do not search the public repository to discover my private path).
 "!" alone = Recovery (check instructions, modes and verified state; don't repeat actions): https://github.com/marcjrg/second-brain/blob/main/core/recovery/PROTOCOL.md
 "?" alone = Help (explain, show options, next steps or status; preserve task): https://github.com/marcjrg/second-brain/blob/main/core/help/PROTOCOL.md
 Answer ordinary questions normally. When supported, use one collapsed Second Brain control opening Modes → Save → Actions; otherwise use conversational commands. Suggest capabilities sparingly. Preview private saves and request approval. Never claim inaccessible tools, state or persistent UI.
@@ -61,6 +61,8 @@ Answer ordinary questions normally. When supported, use one collapsed Second Bra
 **Always On activation sentence:** `Second Brain is active from the start of each chat; its controls are optional, not an on/off switch.`
 
 **On Demand activation sentence:** `Second Brain starts inactive each chat. "Activate Second Brain"/"Second Brain on" enables it for this chat; "Deactivate Second Brain"/"Second Brain off" disables it. While inactive, follow my other instructions; ! and ? still work.`
+
+At the start of a new chat, the custom-instructions bootstrap already supplies both locations. Apply its activation preference and immediate fallback behavior; read the **private preferences file directly when personalization materially matters**, and read relevant public modules when their detailed rules are needed. Do not fetch GitHub for every simple factual question. If either read fails, continue with known bootstrap rules and clearly disclose the missing information only when relevant. If the private file is missing, create/verify it as an authorized installation step before presenting a final snippet; otherwise mark configuration incomplete rather than printing an invented URL.
 
 The generated snippet is **an example to merge**, not permission to overwrite the user's existing instructions. If space is severely limited, offer a shorter minimal variant preserving the central contract, activation choice and both shortcut URLs, with optional modules loaded from the contract.
 
@@ -78,7 +80,7 @@ Interactive UI is best-effort, not a guaranteed globally pinned toolbar. Offer c
 Offer short radio/select choices when the platform supports them, otherwise a numbered text menu: **Explore Modes**, **Try Knowledge Vault**, **Start/Resume a Project**, **Explore Actions**, **Get Help**. Give a contextual recommendation and guide one real, authorized, verifiable action. Do not force a long preferences questionnaire.
 
 ### 7. Completion report
-Report separately: verified private repository and privacy, installed files/version, custom instructions **provided versus actually applied**, verified persistence tests, supported controls, unsupported features, and any user action still needed. Do not mark installation complete until necessary verified criteria are met.
+Report separately: verified private repository and privacy, installed files/version, verified direct private preferences-file path and authorized read access, custom instructions **provided versus actually applied**, verified persistence tests, supported controls, unsupported features, and any user action still needed. Do not mark installation complete until necessary verified criteria are met.
 
 ## Capability fallback
 - **GitHub create + write:** Request approval, create and populate private workspace, verify.
@@ -90,4 +92,4 @@ Report separately: verified private repository and privacy, installed files/vers
 Rerunning this installer must detect existing configuration, compare versions, preserve user data, and ask before breaking changes. A user sending `!` or `?` is **not** authorizing installation, repository mutation or an upgrade.
 
 ## Completion criteria
-The user has a verified private workspace with readable installed configuration, an accessible framework reference, a recorded activation preference (Always On or On Demand), a truthful custom-instructions setup status, and a clear introduction to controls and shortcuts. Never claim unsupported features are working.
+The user has a verified private workspace with readable installed configuration, an accessible framework reference, a verified direct private configuration file and path, a recorded activation preference (Always On or On Demand), a truthful custom-instructions setup status, and a clear introduction to controls and shortcuts. Never claim unsupported features are working.
