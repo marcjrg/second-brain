@@ -95,6 +95,9 @@ Use [settings/PROTOCOL.md](settings/PROTOCOL.md) for settings and migrations. Ru
 ## Public release channel
 Every installation must include the direct public update entry point: https://github.com/marcjrg/second-brain/blob/main/updates/RELEASES.md and machine-readable manifest: https://github.com/marcjrg/second-brain/blob/main/updates/MANIFEST.json . On explicit update requests, follow https://github.com/marcjrg/second-brain/blob/main/updates/PROTOCOL.md . Add the compact line `Second Brain updates: https://github.com/marcjrg/second-brain/blob/main/updates/RELEASES.md (check when I ask; preserve my private workspace).` to the generated bootstrap. Public updates do not require copying templates over existing private files. Show new features and compatibility; never promise unsolicited alerts without an actual monitor.
 
+## Version check during setup and use
+Follow [updates/PROTOCOL.md](updates/PROTOCOL.md) to compare the public release manifest with private `config/installation.yaml` and `config/preferences.yaml`. During installation, perform this check once files are accessible. During normal use, check on first framework-relevant access when Always On is active, or on explicit activation when On Demand is selected; explicit update requests always check. Do not delay ordinary factual answers for GitHub. Compatible public updates require no private data replacement; migrations and private version metadata changes require preview and approval. If inaccessible, report unverified status rather than assuming versions match.
+
 ## Recovery and update behavior
 Rerunning this installer must detect existing configuration, compare versions, preserve user data, and ask before breaking changes. A user sending `!` or `?` is **not** authorizing installation, repository mutation or an upgrade.
 
