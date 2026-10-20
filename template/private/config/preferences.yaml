@@ -1,0 +1,12 @@
+schema_version: "1.0"
+activation:
+  mode: always_on
+communication:
+  default_mode: collaborative_instructor
+proactivity:
+  level: balanced
+knowledge:
+  saving_policy: suggest_and_approve
+primary_uses: []
+interface:
+  preferred_control: compact_second_brain
