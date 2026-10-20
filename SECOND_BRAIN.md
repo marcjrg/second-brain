@@ -19,3 +19,6 @@ Second Brain is an **ambient operating framework when enabled**. Installation of
 
 ## Architecture
 The public repository holds shared operating instructions and modules; the user's private repository holds personal configuration and approved records. Custom instructions should contain the public operating-contract URL, verified private repository URL, and verified direct preferences-file URL. Read authoritative files selectively as needed; do not require GitHub access for simple factual questions. If retrieval fails, state the limitation when relevant and use available bootstrap instructions. Propose persistent changes and seek appropriate authorization before editing repositories.
+
+## Public updates
+On explicit update requests, read [updates/RELEASES.md](updates/RELEASES.md) and [updates/MANIFEST.json](updates/MANIFEST.json), then follow [updates/PROTOCOL.md](updates/PROTOCOL.md). Public updates are non-destructive: private preferences, knowledge and projects are never overwritten by a public template. Explain changes and obtain approval for any private writes or migrations. No automatic push notifications are implied.
