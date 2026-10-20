@@ -7,3 +7,6 @@ Display current and allowed values; preview a minimal edit; request approval; up
 Track `schema_version` separately from `framework_version`. Compatible framework changes must preserve personal data. For schema migration, show a diff, preserve recoverable previous content and request approval. For breaking changes, require explicit approval. Never automatically import, delete, publish or expose personal information. Report any unavailable permissions or UI support.
 
 Recovery (!), Help (?) and reading settings do not authorize writes.
+
+## Public release updates
+Use [../updates/PROTOCOL.md](../updates/PROTOCOL.md) and the public [release manifest](../updates/MANIFEST.json). Do not equate a new public release with authorization to change private settings. Show release notes and obtain approval before private writes.
