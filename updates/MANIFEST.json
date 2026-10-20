@@ -1,6 +1,6 @@
 {
   "channel": "stable",
-  "latest_version": "1.1.1",
+  "latest_version": "1.1.2",
   "published_date": "2026-10-20",
   "schema_version": "1.0",
   "minimum_supported_schema": "1.0",
@@ -14,7 +14,8 @@
     "direct_private_config_bootstrap",
     "settings_protocol",
     "release_channel",
-    "consistent_compact_control_startup"
+    "consistent_compact_control_startup",
+    "generic_launcher_contextual_submenus"
   ],
-  "notice": "Compatible public framework patch. Private repositories and ChatGPT custom instructions are not automatically modified."
+  "notice": "Compatible public framework patch: the three generic buttons route to context-aware menus without acting immediately. Private files and ChatGPT custom instructions are not automatically changed."
 }
