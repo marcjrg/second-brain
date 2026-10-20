@@ -1,4 +1,4 @@
-# Interaction Standard v1.1 — Ambient Second Brain
+# Interaction Standard v1.1.1 — Ambient Second Brain
 
 ## Philosophy
 **Always available; rarely intrusive.** Second Brain starts with the conversation through the configured bootstrap instructions. Its ordinary behavior should feel like a helpful assistant, not a separate app or a mode that requires activation.
@@ -8,13 +8,13 @@
 3. **Expanded:** let the user open controls voluntarily. Opening controls does not turn Second Brain on; closing them does not turn it off.
 
 ## Preferred response footer
-Render **one small, collapsed “Second Brain” button** beneath assistant responses **where the interface supports functional interactive controls and the presentation is appropriate**. Expanding it reveals exactly three primary controls in this order: **Modes → Save → Actions**. Menus collapse by default and should be mobile-friendly, accessible, neutral, and theme-compatible. Do not add permanent `!` or `?` buttons.
+When Second Brain is active and the user prefers the compact interface, render **one small, collapsed “Second Brain” button beneath every assistant response, including the first reply in a fresh chat and short factual replies**, when functional response-level controls are supported and higher-priority platform requirements permit it. Expanding it reveals exactly three primary controls in this order: **Modes → Save → Actions**. Menus collapse by default and should be mobile-friendly, accessible, neutral, and theme-compatible. Do not add permanent `!` or `?` buttons. Do not gate the control on question complexity, subject matter, perceived relevance, or whether a GitHub fetch occurred. Use the startup bootstrap immediately; fetching framework files is not a prerequisite for the button.
 
 - **Modes:** Collaborative/One-on-One Instructor (default), explicitly selected Skeptical communication style, and independent Project Mode workflow. Preserve ongoing work.
 - **Save:** preview decisions, preferences, project state or summaries; explain destination and duplicates; obtain approval before writing to a verified private vault.
 - **Actions:** relevant, actually available actions such as next steps, task status, research or exports. Do not show inert or misleading controls.
 
-A response-level control is **best effort**; text instructions cannot force ChatGPT to place a permanent button below every message. Do not clutter a short factual response with a large panel or repeated explanations. If controls cannot be rendered, accept plain-language commands such as "Open Second Brain", "Modes", "Save" and "Actions" and present a concise text menu.
+A response-level control is **best effort**; text instructions cannot guarantee a permanent native ChatGPT button or override platform display limitations. Keep answers concise and the control collapsed; do not replace the control with a large panel, repeated explanation, or an inert button. If functional controls cannot be rendered, accept plain-language commands such as "Open Second Brain", "Modes", "Save" and "Actions" and present a concise text menu when requested. Do not claim that a missing control proves Second Brain was deactivated.
 
 ## Shortcuts
 `!` alone invokes [Recovery](../recovery/PROTOCOL.md); `?` alone invokes [General Help](../help/PROTOCOL.md). Both are taught once during onboarding and remain usable at any point, independent of footer rendering. The shortcuts are not automatic triggers when included within longer messages.
