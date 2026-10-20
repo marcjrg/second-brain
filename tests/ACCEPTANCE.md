@@ -18,3 +18,5 @@ Report PASS / FAIL / NOT TESTED with evidence for each:
 15. In a separate configured Always On fresh chat, ask an ordinary short factual question as the first message. Verify that the assistant answers directly, includes exactly one compact collapsed Second Brain control if supported, and that Modes, Save and Actions open appropriately. A GitHub request must not be required to show the control. If a platform limitation prevents it, record the omission and fallback instead of reporting PASS.
 
 Repository checks do not prove custom instructions were applied or fresh-chat behavior. Do not mark release fully verified until relevant live checks are completed.
+
+16. Test all three launcher buttons on a factual exchange: the initial dropdown must contain exactly `Modes`, `Save`, `Actions`, not a proposed switch, specific save, or suggested action. Each click must lead to a distinct submenu in the next reply with multiple available options and conversation context; opening the submenu must not change modes, persist data or execute a tool action. Verify that the Save path requests preview and approval before a later write, and that the current mode/task is preserved.
