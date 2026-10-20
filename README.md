@@ -18,3 +18,6 @@ Where supported, a single collapsed **Second Brain** control expands to **Modes 
 Send **`!`** alone for recovery, or **`?`** alone for general help, options, explanations, next steps or status.
 
 For personalized setup see [onboarding/PROTOCOL.md](onboarding/PROTOCOL.md), [schema/PREFERENCES.md](schema/PREFERENCES.md), [settings/PROTOCOL.md](settings/PROTOCOL.md) and [tests/ACCEPTANCE.md](tests/ACCEPTANCE.md). See [SECOND_BRAIN.md](SECOND_BRAIN.md) for the operating contract.
+
+## Updates
+Second Brain evolves through a public [release channel](updates/RELEASES.md), [version manifest](updates/MANIFEST.json), and [safe update protocol](updates/PROTOCOL.md). Ask **“Check Second Brain updates”** to compare versions when GitHub is accessible. Private repositories are never automatically overwritten by public releases. Notifications require an actual monitoring mechanism.
