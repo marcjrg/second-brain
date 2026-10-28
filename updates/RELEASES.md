@@ -2,7 +2,18 @@
 
 This is the **public, canonical update entry point**. Installations should link directly here and to [MANIFEST.json](MANIFEST.json). Check when a user requests "Second Brain updates", when running installation, or during an explicitly requested update check. Do not claim proactive notifications without a scheduled monitor or connected capability.
 
-## Current: 1.2.1 — Automatic Project Mode environment routing (2026-10-27)
+## Current: 1.3.0 — Experimental executable Level 2 Codex watchdog (2026-10-27)
+- Added [integrations/codex/runtime/](../integrations/codex/runtime/README.md): Python 3.11+ independent app-server supervisor, CLI, isolated worker scheduler, timeout interruption and atomic state ledger.
+- Added same-host project locking and a maximum of **three** specialist workers managed by this controller. Default Codex launch disables nested agents; other Codex processes and remote hosts remain outside its scope.
+- Implemented bounded failure response (two equivalent failures trigger cancellation), no-progress diagnostic checkpoints, approval denial, dependency-aware blocking, fail-closed restart policy and separately authorized acceptance verification.
+- Published a disposable task-plan example and 15 mocked protocol, safety and regression tests; verified all nine source/package files against Git blob hashes on `main`.
+- Linked runtime documentation and launch requirements from Second Brain's operating contract and Codex watchdog references.
+
+**Status:** The executable runner is published and simulated tests pass. **Real Codex CLI/app-server smoke tests have not been performed** because the Codex binary was unavailable in the authoring environment. The runtime is opt-in and does not automatically start merely by selecting Project Mode, opening Codex, using Work or reading GitHub. Independent runtime watchdog is **NOT ACTIVE** until explicitly launched and verified for the task. No automated recovery generation, crash adoption or multi-host distributed lease is claimed.
+
+**Compatibility:** Additive public feature, private schema 1.0 unchanged, no user-data migration or custom-instructions changes; separate Project Mode repository unchanged.
+
+## Previous: 1.2.1 — Automatic Project Mode environment routing (2026-10-27)
 - Published [Codex activation guidance](../integrations/codex/ACTIVATION.md) that activates the Codex-specific policy automatically when **Project Mode is invoked for coding in a verified Codex execution context**. No separate policy-on command is needed.
 - Defined a safe fallback for Chat, Work and unknown execution contexts: retain normal Project Mode, relevant available tools and instruction-level anti-loop checkpoints. Codex repository files and connected GitHub access do **not** establish that the current conversation runs in Codex.
 - Added activation requirements to Codex README, orchestration, `AGENTS.md` template, operating contract, public installer and acceptance tests.
