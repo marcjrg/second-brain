@@ -83,6 +83,9 @@ After the five-question personalization and verified installation, offer short r
 ### 7. Completion report
 Report separately: verified private repository and privacy, installed files/version, verified direct private preferences-file path and authorized read access, custom instructions **provided versus actually applied**, verified persistence tests, supported controls, unsupported features, and any user action still needed. Do not mark installation complete until necessary verified criteria are met.
 
+## Optional Codex integration (separate from ordinary installation)
+For a user who explicitly chooses agentic Codex software development, direct them to [integrations/codex/README.md](integrations/codex/README.md). Do not silently install an external controller, spawn Codex workers, alter global configuration, or copy project files on behalf of an ordinary Second Brain installation. Preserve existing project `AGENTS.md` rules and require explicit authorization for public deployments, paid services, permissions changes, secrets handling, and other consequential actions. The external watchdog is NOT ACTIVE until separately deployed and verified; instruction-level checkpoints remain available via Project Mode. A Codex integration does not require modifying private Second Brain configuration schema v1.0 or the existing custom-instructions bootstrap.
+
 ## Capability fallback
 - **GitHub create + write:** Request approval, create and populate private workspace, verify.
 - **GitHub write only:** Supply the direct creation link, wait for completion, populate and verify.
