@@ -25,5 +25,8 @@ When Project Mode is invoked, [environment-aware activation rules](integrations/
 ## Optional Codex multi-agent watchdog
 Software development workflows can use the [Codex orchestration integration](integrations/codex/README.md): up to **three specialist agents**, Project Mode anti-loop safeguards, task-level failure isolation, and explicit approval boundaries. It includes native configuration templates and a specification for **independent runtime supervision**, which requires a separate running, verified controller; this repository does not start one. This integration is optional and does not change the normal Second Brain interface or private workspace.
 
+## Level 2 watchdog runtime
+An optional [experimental Level 2 Codex watchdog runner](integrations/codex/runtime/README.md) is available as Python source, with mocked protocol tests and a reviewed example task manifest. It **must be installed and launched separately** on a development machine with Codex CLI; it does not supervise ordinary ChatGPT chats or Codex Cloud tasks. Fifteen simulated integration/safety tests passed; live Codex compatibility remains unverified.
+
 ## Updates
 Second Brain evolves through a public [release channel](updates/RELEASES.md), [version manifest](updates/MANIFEST.json), and [safe update protocol](updates/PROTOCOL.md). Ask **“Check Second Brain updates”** to compare versions when GitHub is accessible. Private repositories are never automatically overwritten by public releases. Notifications require an actual monitoring mechanism.
