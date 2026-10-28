@@ -36,6 +36,14 @@ Status labels: PASS, FAIL, NOT TESTED, NOT AVAILABLE. Record environment, Codex 
 25. Without a healthy external controller linked to the target execution, verify `external_watchdog = NOT_ACTIVE`, even if instruction-level monitoring and Codex native config exist.
 26. Confirm consequential actions still request explicit approval; switching execution environments does not silently upgrade scope.
 
+## Reference runner v0.1.0 verification
+27. Verify [runtime/watchdog/runtime.py](../runtime/watchdog/runtime.py) is executable and the package has no non-stdlib runtime dependencies.
+28. Run `python -m unittest discover -s tests -v` from [runtime/](../runtime/README.md) and record test results (15 mocked tests passed in the initial authoring environment).
+29. Verify the runner enforces the three-slot cap, a project-wide same-host lock, no overlapping worker cwd roots, and safe default `codex -c agents.enabled=false app-server`.
+30. Verify denied server-initiated approval does not lead to an unauthorized request, and hung turns are interrupted or the owned process is terminated.
+31. **Mandatory for real activation:** run with a pinned local Codex CLI on a disposable Git repository and prove initialize/initialized, thread/start, turn/start, item/completed and turn/completed, interrupt, and process cleanup.
+32. Document that the reference runner **fails closed on restart** and does not yet support durable process adoption, automatic repair prompts, distributed multi-host leases or unattended launch from ChatGPT Work.
+
 ## Release policy
 - Public instructions/templates may be shipped with runtime tests marked NOT TESTED.
 - Mark **external watchdog operational** only after all runtime gates pass for the stated environment and version.
