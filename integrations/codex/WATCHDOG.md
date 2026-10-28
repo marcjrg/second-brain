@@ -1,5 +1,10 @@
 # Two-layer Codex watchdog policy
 
+## Executable reference implementation
+An [experimental Python Level 2 controller](runtime/README.md) is available in this repository. It drives real Codex app-server requests when installed and launched on a machine with Codex CLI. Its current test results cover a **mock app-server only**; no live Codex integration has been verified in the authoring environment. Features include a three-worker project/host limit, request denial, timeout-based interruption, deterministic checkpoints, persisted status and dependency-aware task failure containment. Its recovery policy intentionally blocks work rather than inventing repair attempts.
+
+**Reading these files does not start the controller.** Only claim `external_watchdog = ACTIVE` when a separately running controller actually owns and supervises the target task with a verified connection. The implementation is experimental until live Codex tests pass.
+
 ## Status: policy published, external runtime NOT deployed by this repository
 
 Layer 1 is the **instruction-level checkpoint policy** owned by [Project Mode watchdog v1.0](https://github.com/marcjrg/project-mode-framework/blob/main/skills/watchdog/SKILL.md). It executes when an agent regains control and cannot interrupt hidden reasoning or a hung tool.
