@@ -1,7 +1,7 @@
 {
   "channel": "stable",
-  "latest_version": "1.1.3",
-  "published_date": "2026-10-20",
+  "latest_version": "1.2.0",
+  "published_date": "2026-10-27",
   "schema_version": "1.0",
   "minimum_supported_schema": "1.0",
   "release_notes": "https://github.com/marcjrg/second-brain/blob/main/updates/RELEASES.md",
@@ -16,7 +16,11 @@
     "release_channel",
     "consistent_compact_control_startup",
     "generic_launcher_contextual_submenus",
-    "ui_first_hybrid_startup"
+    "ui_first_hybrid_startup",
+    "optional_codex_orchestration_policy",
+    "codex_three_specialist_session_cap",
+    "codex_watchdog_runtime_contract",
+    "codex_task_isolation_and_approval_gates"
   ],
-  "notice": "Compatible public patch: short custom-instructions UI bootstrap plus preferred single startup read of detailed public UI contract. Neither a permanent button nor a repository read is guaranteed by platform controls."
+  "notice": "Compatible optional Codex integration: public instructions and configuration templates are available. Instruction-level Project Mode anti-loop checkpoints are supported; independent external watchdog runtime is NOT installed or active by this release. No private migration or custom-instructions change."
 }
