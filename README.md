@@ -19,6 +19,9 @@ Send **`!`** alone for recovery, or **`?`** alone for general help, options, exp
 
 For personalized setup see [onboarding/PROTOCOL.md](onboarding/PROTOCOL.md), [schema/PREFERENCES.md](schema/PREFERENCES.md), [settings/PROTOCOL.md](settings/PROTOCOL.md) and [tests/ACCEPTANCE.md](tests/ACCEPTANCE.md). See [SECOND_BRAIN.md](SECOND_BRAIN.md) for the operating contract.
 
+## Automatic Project Mode routing
+When Project Mode is invoked, [environment-aware activation rules](integrations/codex/ACTIVATION.md) select the applicable guidance: ordinary Chat and Work retain standard Project Mode, while a **verified Codex software-development environment** automatically loads Codex orchestration rules. A conversation cannot always see the UI's selected mode, so it must use verified runtime evidence or fall back safely. Loading policy never launches workers or starts a watchdog controller.
+
 ## Optional Codex multi-agent watchdog
 Software development workflows can use the [Codex orchestration integration](integrations/codex/README.md): up to **three specialist agents**, Project Mode anti-loop safeguards, task-level failure isolation, and explicit approval boundaries. It includes native configuration templates and a specification for **independent runtime supervision**, which requires a separate running, verified controller; this repository does not start one. This integration is optional and does not change the normal Second Brain interface or private workspace.
 
