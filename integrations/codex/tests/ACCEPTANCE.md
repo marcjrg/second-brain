@@ -1,0 +1,33 @@
+# Codex integration acceptance plan
+
+Status labels: PASS, FAIL, NOT TESTED, NOT AVAILABLE. Record environment, Codex version, repo revision, evidence link, and date; documentation review is **not** runtime proof.
+
+## Static/public checks
+1. `SECOND_BRAIN.md` links to the Codex integration without activating it for ordinary chats.
+2. Native config example parses as TOML; `agents.enabled=true`, `max_concurrent_threads_per_session=3`, `interrupt_message=true`, and `approval_policy="on-request"`.
+3. All links resolve; Project Mode remains source of truth for instruction-level watchdog thresholds.
+4. Private templates, preferences, Knowledge Vault and activation/UI behavior are not overwritten.
+5. Manifest, release notes and public contract agree on version, compatibility and capability status.
+
+## Native Codex smoke tests (disposable repo)
+6. Verify project config actually loads for a trusted project; roles are offered where supported.
+7. Spawn one, then up to three subagents; check that per-session cap applies; no unrequested agents are automatically spawned.
+8. Concurrent writers use separate branches or worktrees; reviewer reports findings; integration tests validate merged results.
+9. Confirm ordinary single-agent use and approval prompts remain usable.
+
+## External runtime controller acceptance — must be demonstrated BEFORE claiming active
+10. Global project semaphore never admits more than three concurrent specialists across **multiple Codex sessions**, including nested spawn pathways. Coordinator is not counted.
+11. Repeated equivalent failure triggers diagnosis by second instance and does not execute a third identical retry; changed prerequisites do not cause a false positive.
+12. Three no-progress actions, two oscillatory reversals, and five-action checkpoints produce expected events, without flagging legitimate distinct batch outputs.
+13. Two distinct unsuccessful recovery attempts BLOCK affected task, preserve verified output and block dependent tasks, while independent authorized tasks continue.
+14. Global incident (shared corruption, unauthorized credential request, or project-wide budget) PAUSES entire project instead of continuing unsafely.
+15. Real `turn/interrupt` targets the correct active thread/turn; confirm terminal status, resource release and durable state; simulate failed interruption/connection loss.
+16. Restart controller while two workers run: reconcile processes/leases before permitting any new worker; on unresolved state fail closed.
+17. Human approval denial and `WAITING_APPROVAL` cannot be converted into automatic approval or unauthorized retry.
+18. Secrets, personal data and hidden reasoning are absent from logs; failed writes or missing evidence never yield COMPLETE.
+19. Run against at least one actual local Codex app-server instance. Synthetic events alone are insufficient to pass runtime tests.
+
+## Release policy
+- Public instructions/templates may be shipped with runtime tests marked NOT TESTED.
+- Mark **external watchdog operational** only after all runtime gates pass for the stated environment and version.
+- Do not claim a Codex install, active workers, independent supervision, or deployment merely because these files were published.
