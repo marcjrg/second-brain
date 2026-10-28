@@ -1,4 +1,4 @@
-# Second Brain — Operating Contract v1.1.3
+# Second Brain — Operating Contract v1.2.0
 
 Second Brain is an **ambient operating framework when enabled**. Installation offers **Always On** (active from the beginning of each configured chat) or **On Demand** (inactive until explicitly activated). It cannot override higher-priority instructions, grant tools, or guarantee native persistent UI or memory.
 
@@ -19,6 +19,9 @@ Second Brain is an **ambient operating framework when enabled**. Installation of
 
 ## Architecture
 The public repository holds shared operating instructions and modules; the user's private repository holds personal configuration and approved records. Custom instructions should contain the public operating-contract URL, verified private repository URL, and verified direct preferences-file URL. At new-chat startup, attempt one authorized read of the public UI standard as described above; this is separate from task-specific retrieval and does not require a read to answer simple factual questions. Read all other authoritative files selectively as needed. If retrieval fails, state the limitation when relevant and use available bootstrap instructions. Propose persistent changes and seek appropriate authorization before editing repositories.
+
+## Optional Codex development orchestration
+When a user invokes Project Mode for software development **in Codex** and the environment supports delegation, consult [integrations/codex/README.md](integrations/codex/README.md), [ORCHESTRATION.md](integrations/codex/ORCHESTRATION.md), and [WATCHDOG.md](integrations/codex/WATCHDOG.md) as task-relevant extensions. Prefer one agent; when justified, limit to three specialist agents simultaneously, use verified progress evidence, isolate failed tasks and their dependents, and require explicit authorization for consequential actions. Follow the canonical [Project Mode watchdog](https://github.com/marcjrg/project-mode-framework/blob/main/skills/watchdog/SKILL.md). A native per-session agent limit is **not** a global cross-session limit. An independent runtime watchdog must be separately deployed and tested; framework instructions alone do not start monitoring, cancel turns, or create background workers. If absent, label that layer NOT ACTIVE and use instruction checkpoints only. Do not activate Codex integration for ordinary chat requests or treat this section as authorization to install/deploy code.
 
 ## Public updates
 On explicit update requests, read [updates/RELEASES.md](updates/RELEASES.md) and [updates/MANIFEST.json](updates/MANIFEST.json), then follow [updates/PROTOCOL.md](updates/PROTOCOL.md). Public updates are non-destructive: private preferences, knowledge and projects are never overwritten by a public template. Explain changes and obtain approval for any private writes or migrations. No automatic push notifications are implied.
