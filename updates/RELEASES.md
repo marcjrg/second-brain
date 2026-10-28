@@ -2,7 +2,18 @@
 
 This is the **public, canonical update entry point**. Installations should link directly here and to [MANIFEST.json](MANIFEST.json). Check when a user requests "Second Brain updates", when running installation, or during an explicitly requested update check. Do not claim proactive notifications without a scheduled monitor or connected capability.
 
-## Current: 1.1.3 — UI-first hybrid startup (2026-10-20)
+## Current: 1.2.0 — Optional Codex agent orchestration strategy (2026-10-27)
+- Added `integrations/codex/` with a three-specialist default ceiling, native Codex configuration example, task and dependency contracts, and reusable `AGENTS.md` clauses.
+- Introduced a documented two-layer watchdog design: existing Project Mode instruction checkpoints plus an **independent runtime controller only when separately installed and tested**.
+- Defined bounded recovery, task-local blocking with dependency-aware continuation, progress evidence, global cross-session worker leasing, and explicit human approval boundaries.
+- Added Codex smoke-test and independent-controller acceptance gates; native per-session subagent settings **do not** enforce a cross-session ceiling.
+- Linked the optional integration from the operating contract, README and installer without changing the standard Second Brain UI or normal chat behavior.
+
+**Delivery status:** Public policy and project templates are published. No Codex runtime controller has been installed, deployed or verified through this release; independent runtime monitoring is **NOT ACTIVE** solely because Second Brain is installed. Implementation and live fault-injection verification are separate future steps.
+
+**Compatibility:** Compatible with private configuration schema 1.0. No migration, private writes or new custom-instructions bootstrap required. Does not modify the separate Project Mode repository.
+
+## Previous: 1.1.3 — UI-first hybrid startup (2026-10-20)
 - Split startup behavior into a concise custom-instructions UI bootstrap and a detailed public interaction standard.
 - On the first assistant turn of a configured chat, request one read of the public UI standard when authorized GitHub access is available. Do not repeat it for each ordinary question.
 - Clarified that the first-response button comes from the bootstrap and does **not** depend on a successful GitHub read; the public read enriches the context-aware submenus.
