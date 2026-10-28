@@ -1,6 +1,6 @@
 {
   "channel": "stable",
-  "latest_version": "1.2.1",
+  "latest_version": "1.3.0",
   "published_date": "2026-10-27",
   "schema_version": "1.0",
   "minimum_supported_schema": "1.0",
@@ -21,7 +21,11 @@
     "codex_three_specialist_session_cap",
     "codex_watchdog_runtime_contract",
     "codex_task_isolation_and_approval_gates",
-    "project_mode_environment_aware_codex_activation"
+    "project_mode_environment_aware_codex_activation",
+    "experimental_codex_level2_python_watchdog_runner",
+    "three_worker_local_scheduler",
+    "codex_app_server_mock_test_suite",
+    "codex_fails_closed_approval_and_interruption"
   ],
-  "notice": "Compatible public update: Project Mode automatically loads Codex orchestration rules only for verified Codex coding execution, otherwise applies safe standard Project Mode routing. UI mode identification is not always exposed. External watchdog runtime remains NOT ACTIVE unless separately installed and verified. No private migration or bootstrap change."
+  "notice": "Compatible public release: experimental Level 2 Codex app-server watchdog Python source is published. Fifteen simulated tests passed, but live Codex app-server compatibility has NOT been tested in this environment. Manually install/launch/verify; no auto startup from ChatGPT Work or Project Mode. Private schema remains 1.0."
 }
