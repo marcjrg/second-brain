@@ -1,5 +1,8 @@
 # Codex orchestration contract
 
+## Activation prerequisite
+Before treating this as an executable Codex orchestration policy, apply [ACTIVATION.md](ACTIVATION.md) to confirm the coding task's execution context. **Project Mode alone does not mean the chat is running inside Codex**; Work and general Chat may not expose a reliable mode label. If Codex is unverified, use ordinary Project Mode, baseline instruction watchdog and only the available authorized tools. Never claim a cross-session semaphore or independent external watchdog exists without a deployed, verified controller.
+
 ## Goal, roles, and routing
 
 Second Brain supplies preferences and user authorization. Project Mode owns goals, scope, acceptance criteria, task ledger, and source-control policy. Codex performs development tasks. The external controller, **if separately installed**, owns worker admission, lifecycle events, timeouts, and interruptions. The independent watchdog is deterministic software, not a fourth LLM worker.
