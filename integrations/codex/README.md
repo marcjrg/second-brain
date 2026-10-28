@@ -1,6 +1,9 @@
-# Codex multi-agent orchestration — Second Brain v1.2.0
+# Codex multi-agent orchestration — Second Brain v1.2.1
 
 Optional integration for **Codex development projects**. This module is **not** a new Second Brain mode, and it does not run when answering ordinary ChatGPT questions.
+
+## Automatic activation
+Read [ACTIVATION.md](ACTIVATION.md). When **Project Mode is invoked in confirmed Codex for a coding task**, load these policies automatically; no second watchdog activation command is required. In Work, ordinary Chat, or an environment whose Codex identity is unconfirmed, use Project Mode with verified available tools and the baseline instruction watchdog, **without pretending Codex orchestration is active**. Codex files, GitHub access or a user's mention of Codex do not independently prove the runtime. A separate runtime watchdog still requires installation, health verification and live execution coverage.
 
 ## Status and honest capability boundary
 
