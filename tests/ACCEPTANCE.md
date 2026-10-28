@@ -25,3 +25,7 @@ Repository checks do not prove custom instructions were applied or fresh-chat be
 18. Verify optional Codex integration entry point, manifest feature flag, and valid TOML config (`agents.max_concurrent_threads_per_session = 3`, `approval_policy = "on-request"`) without modifying private workspace or ordinary chat startup.
 19. Verify integration documentation requires a global project-level cap of three independent of native per-session limits and enforces consequential-operation approval boundaries.
 20. Verify only instruction-level supervision is claimed until an actual controller passes the external runtime acceptance checklist at [../integrations/codex/tests/ACCEPTANCE.md](../integrations/codex/tests/ACCEPTANCE.md). Do not mark runtime supervision PASS by checking documents alone.
+
+21. Environment-aware activation: see [../integrations/codex/ACTIVATION.md](../integrations/codex/ACTIVATION.md). Verify Project Mode instruction watchdog applies in Chat, Work and Codex while Codex-specific orchestration activates only for a verified Codex coding execution, never from repository files or task wording alone.
+22. Verify unknown/unexposed UI mode leads to safe Project Mode fallback; do not invent Work/Codex identity. No new private preferences or manual bootstrap edits are required.
+23. Verify loading public policy neither launches workers nor reports the independently running external watchdog ACTIVE without a verified controller connection.
