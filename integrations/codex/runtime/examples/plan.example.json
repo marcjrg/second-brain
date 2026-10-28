@@ -1,0 +1,23 @@
+{
+  "project_root": "/ABSOLUTE/PATH/TO/SAFE-DISPOSABLE-PROJECT",
+  "tasks": [
+    {
+      "id": "implementation",
+      "cwd": "/ABSOLUTE/PATH/TO/SAFE-DISPOSABLE-PROJECT/worktree-implementation",
+      "prompt": "Within this disposable worktree, implement the approved small feature and write a testable result to feature.txt. Do not deploy or contact external services.",
+      "deps": [],
+      "evidence_files": ["feature.txt"],
+      "timeout_seconds": 600,
+      "progress_timeout_seconds": 300
+    },
+    {
+      "id": "independent-review",
+      "cwd": "/ABSOLUTE/PATH/TO/SAFE-DISPOSABLE-PROJECT/worktree-review",
+      "prompt": "Review the current worktree only; put review findings into review.txt. Do not merge or deploy.",
+      "deps": [],
+      "evidence_files": ["review.txt"],
+      "timeout_seconds": 600,
+      "progress_timeout_seconds": 300
+    }
+  ]
+}
