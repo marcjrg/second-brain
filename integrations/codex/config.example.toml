@@ -1,0 +1,23 @@
+# Template for a trusted project's .codex/config.toml.
+# Copy deliberately; this does not install or start an external watchdog.
+# Native concurrency is per Codex session, NOT across independent sessions.
+
+approval_policy = "on-request"
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 3
+interrupt_message = true
+
+[agents.explorer]
+description = "Read-only codebase investigation. Return findings and evidence; do not edit files."
+
+[agents.implementer]
+description = "Implement one approved, bounded task in owned files; report diffs, tests and remaining blockers."
+
+[agents.reviewer]
+description = "Review changes for correctness, regression, security and tests independently; avoid concurrent writes."
+
+# The project-wide three-worker semaphore, dependency scheduling, and actual
+# interruption/timeouts belong to a separately running external controller.
+# Approval prompts alone do NOT cover all consequential-action authorizations.
