@@ -1,6 +1,6 @@
 {
   "channel": "stable",
-  "latest_version": "1.2.0",
+  "latest_version": "1.2.1",
   "published_date": "2026-10-27",
   "schema_version": "1.0",
   "minimum_supported_schema": "1.0",
@@ -20,7 +20,8 @@
     "optional_codex_orchestration_policy",
     "codex_three_specialist_session_cap",
     "codex_watchdog_runtime_contract",
-    "codex_task_isolation_and_approval_gates"
+    "codex_task_isolation_and_approval_gates",
+    "project_mode_environment_aware_codex_activation"
   ],
-  "notice": "Compatible optional Codex integration: public instructions and configuration templates are available. Instruction-level Project Mode anti-loop checkpoints are supported; independent external watchdog runtime is NOT installed or active by this release. No private migration or custom-instructions change."
+  "notice": "Compatible public update: Project Mode automatically loads Codex orchestration rules only for verified Codex coding execution, otherwise applies safe standard Project Mode routing. UI mode identification is not always exposed. External watchdog runtime remains NOT ACTIVE unless separately installed and verified. No private migration or bootstrap change."
 }
