@@ -6,11 +6,12 @@ This is the **public, canonical update entry point**. Installations should link 
 - Published [Codex activation guidance](../integrations/codex/ACTIVATION.md) that activates the Codex-specific policy automatically when **Project Mode is invoked for coding in a verified Codex execution context**. No separate policy-on command is needed.
 - Defined a safe fallback for Chat, Work and unknown execution contexts: retain normal Project Mode, relevant available tools and instruction-level anti-loop checkpoints. Codex repository files and connected GitHub access do **not** establish that the current conversation runs in Codex.
 - Added activation requirements to Codex README, orchestration, `AGENTS.md` template, operating contract, public installer and acceptance tests.
+- Linked the separately maintained public Project Mode entry point to this environment-routing policy, so standalone Project Mode activation also uses the same safe detection rules when retrieval is available.
 - Kept **three specialist agents as a ceiling, not an automatic spawn target**, and preserved approval requirements and task-local recovery behavior.
 
 **Capability boundary:** Not every ChatGPT conversation exposes reliable machine-readable UI mode identification. Loading public instructions does not launch Codex, install a controller, run agents, or establish true independent watchdog supervision. External runtime watchdog remains **NOT ACTIVE** unless a separately deployed controller is connected and verified.
 
-**Compatibility:** Schema 1.0 unchanged; compatible public patch, no private migration and no custom-instructions bootstrap update required. Separate Project Mode repository unchanged.
+**Compatibility:** Schema 1.0 unchanged; compatible public patch, no private migration and no custom-instructions bootstrap update required. Public Project Mode entry point also updated to reference the new activation policy; private workspace unchanged.
 
 ## Previous: 1.2.0 — Optional Codex agent orchestration strategy (2026-10-27)
 - Added `integrations/codex/` with a three-specialist default ceiling, native Codex configuration example, task and dependency contracts, and reusable `AGENTS.md` clauses.
