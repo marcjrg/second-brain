@@ -2,6 +2,9 @@
 
 Merge into the existing project instructions; do not blindly replace an existing `AGENTS.md`. A repository that already uses Project Mode should keep its current entry point and watchdog rules.
 
+## Automatic activation gate
+On Project Mode use, read https://github.com/marcjrg/second-brain/blob/main/integrations/codex/ACTIVATION.md. The Project Mode instruction watchdog applies during multi-step execution in Chat, Work and Codex. Enable Codex-specific orchestration automatically **only when the current coding execution is confirmed to be Codex**. An `AGENTS.md` file or `.codex/config.toml` alone is not proof of a live Codex session. If unverified, avoid spawning or claiming Codex-native subagents and use the standard Project Mode fallback.
+
 ## Second Brain / Project Mode Codex workflow
 
 For multi-step coding work, follow:
